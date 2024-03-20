@@ -20,11 +20,8 @@ public class Card {
         return suit;
     }
 
-    @Override
+
     public String toString() {
-        return "Card{" +
-                "rank=" + rank +
-                ", suit=" + suit +
-                '}';
+        return "Card{"+ this.rank.toString() +" "+ this.suit.toString() + '}';
     }
 }
