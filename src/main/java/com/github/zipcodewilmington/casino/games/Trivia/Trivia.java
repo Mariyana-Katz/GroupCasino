@@ -6,7 +6,10 @@ public class Trivia {
             return playerAnswer;
         }
 
-    public B checkAnswer(String question) {
+    public String checkAnswer(String question) {
+
+   
+
         return null;
     }
 }
