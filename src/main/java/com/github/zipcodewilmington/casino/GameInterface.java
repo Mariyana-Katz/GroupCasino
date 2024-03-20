@@ -20,4 +20,9 @@ public interface GameInterface extends Runnable {
      * specifies how the game will run
      */
     void run();
+    void play();
+    void nextTurn();
+    Boolean checkGameState();
+    String printGameRules();
+    void exit();
 }
