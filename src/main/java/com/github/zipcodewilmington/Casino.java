@@ -10,10 +10,16 @@ import com.github.zipcodewilmington.casino.games.slots.SlotsGame;
 import com.github.zipcodewilmington.casino.games.slots.SlotsPlayer;
 import com.github.zipcodewilmington.utils.AnsiColor;
 import com.github.zipcodewilmington.utils.IOConsole;
-
+//M
 /**
+SMsbranch
+ * Created by leon on 7/21/2020.
+ * SM Test
  *11 Created by leon on 7/21/2020.
+ master
+ meeee
  */
+//Angelina
 public class Casino implements Runnable {
     private final IOConsole console = new IOConsole(AnsiColor.BLUE);
 
