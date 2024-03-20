@@ -1,5 +1,7 @@
 package com.github.zipcodewilmington.casino;
 
+import java.util.List;
+
 /**
  * Created by leon on 7/21/2020.
  * `ArcadeAccountManager` stores, manages, and retrieves `ArcadeAccount` objects
@@ -11,6 +13,8 @@ public class CasinoAccountManager {
      * @param accountPassword password of account to be returned
      * @return `ArcadeAccount` with specified `accountName` and `accountPassword`
      */
+    private List<CasinoAccount> casinoAccountList;
+
     public CasinoAccount getAccount(String accountName, String accountPassword) {
         String currentMethodName = new Object(){}.getClass().getEnclosingMethod().getName();
         String currentClassName = getClass().getName();

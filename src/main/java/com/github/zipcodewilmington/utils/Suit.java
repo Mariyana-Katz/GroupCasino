@@ -14,4 +14,5 @@ public enum Suit {
     public String getSuitSymbol() {
         return suitSymbol;
     }
+
 }

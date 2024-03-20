@@ -1,6 +1,7 @@
 package com.github.zipcodewilmington.utils;
 
 public enum Rank {
+    //enum
     ACE(14,"A"),
     KING(13,"K"),
     QUEEN(12, "Q"),
