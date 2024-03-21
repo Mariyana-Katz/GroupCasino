@@ -7,11 +7,13 @@ public enum Suit {
     CLUBS("\u2663");
     private String suitSymbol;
 
-    Suit(String suitSymbol) {
+    Suit(String suitSymbol)
+    {
         this.suitSymbol = suitSymbol;
     }
 
-    public String getSuitSymbol() {
+    public String getSuitSymbol()
+    {
         return suitSymbol;
     }
 

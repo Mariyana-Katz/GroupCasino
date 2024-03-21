@@ -31,4 +31,9 @@ public enum Rank {
     public String getFaceValue() {
         return faceValue;
     }
+
+    public int getCardValue()
+    {
+        return value;
+    }
 }

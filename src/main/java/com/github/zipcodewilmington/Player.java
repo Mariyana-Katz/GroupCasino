@@ -11,6 +11,9 @@ public class Player {
         this.tally = new int[]{tally};
     }
 
+    public Player(String aName) {
+    }
+
     public String getName() {
         return name;
     }
@@ -33,5 +36,15 @@ public class Player {
 
     public void setTally(int[] tally) {
         this.tally = tally;
+    }
+
+    public void deposit(int winnings) {
+    }
+
+    public Integer getBalance() {
+        return null;
+    }
+
+    public void withdraw(Integer wager) {
     }
 }

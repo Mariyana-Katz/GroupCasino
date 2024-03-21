@@ -2,7 +2,8 @@ package com.github.zipcodewilmington.casino;
 
 public interface GamblingGame
 {
-    void takeBet();
-
-    void payout();
+    Double placeBets(double moneyToBet);
+//    void takeBet();
+//
+//    void payout();
 }
