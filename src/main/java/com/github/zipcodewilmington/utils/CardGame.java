@@ -3,9 +3,9 @@ package com.github.zipcodewilmington.utils;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
-public class CardGame implements GameInterface {
+public abstract class CardGame implements GameInterface {
     @Override
-    public void add(PlayerInterface player) {
+    public void  add(PlayerInterface player) {
 
     }
 

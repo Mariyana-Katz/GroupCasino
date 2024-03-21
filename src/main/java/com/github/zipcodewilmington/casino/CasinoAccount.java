@@ -16,6 +16,11 @@ public class CasinoAccount {
         this.balance = balance;
     }
 
+    public CasinoAccount(String name, String passWord) {
+        this.name = name;
+        this.passWord = passWord;
+    }
+
     public String getName() {
         return name;
     }
