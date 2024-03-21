@@ -18,4 +18,21 @@ public class CardGame implements GameInterface {
     public void run() {
 
     }
+    @Override
+    public void play() {
+    }
+    @Override
+    public void nextTurn() {
+    }
+    @Override
+    public Boolean checkGameState() {
+        return null;
+    }
+    @Override
+    public String printGameRules() {
+        return null;
+    }
+    @Override
+    public void exit() {
+    }
 }
