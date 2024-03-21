@@ -1,13 +1,17 @@
 package com.github.zipcodewilmington;
+
 import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.casino.CasinoAccountManager;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
-import com.github.zipcodewilmington.casino.games.slots.SlotMachine;
+
+import com.github.zipcodewilmington.casino.games.HigherCards.HigherCardGame;
+import com.github.zipcodewilmington.casino.games.HigherCards.HigherCardPlayer;
+import com.github.zipcodewilmington.casino.games.slots.SlotsGame;
 import com.github.zipcodewilmington.casino.games.slots.SlotsPlayer;
 import com.github.zipcodewilmington.utils.AnsiColor;
 import com.github.zipcodewilmington.utils.IOConsole;
-
+//M
 /**
 SMsbranch
  * Created by leon on 7/21/2020.
@@ -34,9 +38,9 @@ public class Casino implements Runnable {
                 if (isValidLogin) {
                     String gameSelectionInput = getGameSelectionInput().toUpperCase();
                     if (gameSelectionInput.equals("SLOTS")) {
-                        play(new SlotMachine(), new SlotsPlayer());
-//                    } else if (gameSelectionInput.equals("NUMBERGUESS")) {
-//                        play(new HigherCardGame(), new HigherCardPlayer());
+                        play(new SlotsGame(), new SlotsPlayer());
+                    } else if (gameSelectionInput.equals("NUMBERGUESS")) {
+                        play(new HigherCardGame(), new HigherCardPlayer());
                     } else {
                         // TODO - implement better exception handling
                         String errorMessage = "[ %s ] is an invalid game selection";

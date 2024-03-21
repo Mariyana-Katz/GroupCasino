@@ -6,15 +6,19 @@ package com.github.zipcodewilmington.casino;
 public interface GameInterface extends Runnable {
     /**
      * adds a player to the game
+     *
      * @param player the player to be removed from the game
+     * @return
      */
-    void add(PlayerInterface player);
+    boolean add(PlayerInterface player);
 
     /**
      * removes a player from the game
+     *
      * @param player the player to be removed from the game
+     * @return
      */
-    void remove(PlayerInterface player);
+    boolean remove(PlayerInterface player);
 
     /**
      * specifies how the game will run
@@ -25,4 +29,8 @@ public interface GameInterface extends Runnable {
     Boolean checkGameState();
     String printGameRules();
     void exit();
+
+    boolean quit();
+
+    boolean playAgain(String prompt);
 }
