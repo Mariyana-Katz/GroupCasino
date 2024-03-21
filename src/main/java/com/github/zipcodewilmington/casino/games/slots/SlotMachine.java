@@ -1,7 +1,10 @@
 package com.github.zipcodewilmington.casino.games.slots;
+import com.github.zipcodewilmington.casino.GameInterface;
+import com.github.zipcodewilmington.casino.PlayerInterface;
+
 import java.util.Random;
 import java.util.Scanner;
-public class SlotMachine {
+public class SlotMachine implements GameInterface {
     private static final int JACKPOT_MULTIPLIER = 100;
     private static final int MATCH_MULTIPLIER = 10;
     public static void main(String[] args) {
@@ -19,6 +22,7 @@ public class SlotMachine {
         System.out.println("Thanks for playing!");
         scanner.close();
     }
+
     public static boolean playGame(Scanner scanner, Random random) {
         System.out.print("Press Enter to spin: ");
         String input = scanner.nextLine();
@@ -38,7 +42,7 @@ public class SlotMachine {
     public static int[] spinReels(Random random) {
         int[] result = new int[3];
         for (int i = 0; i < 3; i++) {
-            result[i] = random.nextInt(5) + 1; // Generate random number between 1 and 5
+            result[i] = random.nextInt(5) + 1;
         }
         return result;
     }
@@ -50,5 +54,31 @@ public class SlotMachine {
         } else {
             return 0;
         }
+    }
+    @Override
+    public void add(PlayerInterface player) {
+    }
+    @Override
+    public void remove(PlayerInterface player) {
+    }
+    @Override
+    public void run() {
+    }
+    @Override
+    public void play() {
+    }
+    @Override
+    public void nextTurn() {
+    }
+    @Override
+    public Boolean checkGameState() {
+        return null;
+    }
+    @Override
+    public String printGameRules() {
+        return null;
+    }
+    @Override
+    public void exit() {
     }
 }
