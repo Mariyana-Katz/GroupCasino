@@ -16,7 +16,8 @@ public class BlackJack implements GameInterface {
 
     private final IOConsole console = new IOConsole(AnsiColor.BLUE);
     ArrayList<PlayerInterface> players = new ArrayList<>();
-    DeckCards deck = new DeckCards();
+    //DeckCards deck = new DeckCards();
+    BlackJackDeck deck = new BlackJackDeck();
     BlackJackPlayer dealer = new BlackJackPlayer(new CasinoAccount("Mills", "FM111123"));
     @Override
     public boolean add(PlayerInterface player) {
@@ -29,6 +30,7 @@ public class BlackJack implements GameInterface {
     }
 
     public Card deal(){
+//        return deck.pop();
         return deck.pop();
     }
     @Override

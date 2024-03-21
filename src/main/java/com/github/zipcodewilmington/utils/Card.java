@@ -26,9 +26,9 @@ public class Card {
         return "Card{"+ this.rank.toString() +" "+ this.suit.toString() + '}';
     }
 
-    public Rank getFaceValue() {
-        return getFaceValue();
-    }
+//    public Rank getFaceValue() {
+//        return getFaceValue();
+//    }
 
 //    public Object getFace() {
 //        return this.getFace();

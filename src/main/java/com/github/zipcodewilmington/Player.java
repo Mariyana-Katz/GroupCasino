@@ -41,7 +41,8 @@ public class Player {
     public void deposit(int winnings) {
     }
 
-    public Integer getBalance() {
+    public Integer getBalance()
+    {
         return null;
     }
 

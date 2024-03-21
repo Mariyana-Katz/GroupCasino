@@ -45,7 +45,8 @@ public class BlackJackPlayer implements PlayerInterface, GamblingGame {
     }
 
     public void addToHand(Card card){
-        sumOfCards = card.getFaceValue().getCardValue();
+        sumOfCards = card.getRank().getCardValue();
+        //sumOfCards = card.getFaceValue().getCardValue();
         hand.add(card);
     }
 
@@ -73,7 +74,7 @@ public class BlackJackPlayer implements PlayerInterface, GamblingGame {
 
     public void determineAceValue(){
         for(Card c : this.hand){
-            if(c.getFaceValue() == Rank.ACE){
+            if(c.getRank() == Rank.ACE){
                 if(this.sumOfCards - 1 == 10){
                     this.sumOfCards = 21;
                 }
@@ -85,7 +86,7 @@ public class BlackJackPlayer implements PlayerInterface, GamblingGame {
         StringBuilder sb = new StringBuilder("Current hand: \n");
 
         for(Card c : this.hand){
-            sb.append(c.getFaceValue().toString() + " of " + c.getSuit().toString() + "\n");
+            sb.append(c.getRank().toString() + " of " + c.getSuit().toString() + "\n");
         }
 
         System.out.println(sb.toString());
