@@ -16,10 +16,15 @@ public class FlipCoinPlayer implements PlayerInterface {
         return arcadeAccount;
     }
 
-    @Override
-    public <SomeReturnType> SomeReturnType play() {
-        FlipCoin flipCoin = new FlipCoin();
-        flipCoin.playGame();
-        return null;
+   @Override
+   public Boolean play() {
+        return true;
     }
+
+//    @Override
+//    public <SomeReturnType> SomeReturnType play() {
+//        FlipCoin flipCoin = new FlipCoin();
+//        flipCoin.playGame();
+//        return null;
+//    }
 }
