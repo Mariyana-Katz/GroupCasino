@@ -28,6 +28,9 @@ public abstract class CardGame implements GameInterface {
         dealHands(handSize);
     }
 
+    public CardGame(Player player) {
+    }
+
     public String showHand(Player player) {
         StringBuilder sb = new StringBuilder();
         for(Card c : playerHands.get(player)){
