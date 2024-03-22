@@ -5,13 +5,15 @@ public enum Suit {
     HEARTS("\u2665"),
     DIAMONDS("\u2666"),
     CLUBS("\u2663");
-    private String suitSymbol;
+    private final String suitSymbol;
 
-    Suit(String suitSymbol) {
+    Suit(String suitSymbol)
+    {
         this.suitSymbol = suitSymbol;
     }
 
-    public String getSuitSymbol() {
+    public String getSuitSymbol()
+    {
         return suitSymbol;
     }
 
