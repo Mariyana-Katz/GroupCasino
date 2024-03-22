@@ -11,9 +11,10 @@ public class SlotsPlayer  implements PlayerInterface, Gambler {
         return null;
     }
     @Override
-    public <SomeReturnType> SomeReturnType play() {
+    public Boolean play() {
         return null;
     }
+
     @Override
     public void withdraw(Integer amount) {
     }

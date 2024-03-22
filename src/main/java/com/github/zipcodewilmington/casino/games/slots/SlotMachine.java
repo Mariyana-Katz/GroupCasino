@@ -1,10 +1,11 @@
 package com.github.zipcodewilmington.casino.games.slots;
+import com.github.zipcodewilmington.casino.Gambler;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
 import java.util.Random;
 import java.util.Scanner;
-public class SlotMachine implements GameInterface {
+public class SlotMachine implements Gambler {
     private static final int JACKPOT_MULTIPLIER = 100;
     private static final int MATCH_MULTIPLIER = 10;
     public static void main(String[] args) {
@@ -56,29 +57,9 @@ public class SlotMachine implements GameInterface {
         }
     }
     @Override
-    public void add(PlayerInterface player) {
+    public void withdraw(Integer amount) {
     }
     @Override
-    public void remove(PlayerInterface player) {
-    }
-    @Override
-    public void run() {
-    }
-    @Override
-    public void play() {
-    }
-    @Override
-    public void nextTurn() {
-    }
-    @Override
-    public Boolean checkGameState() {
-        return null;
-    }
-    @Override
-    public String printGameRules() {
-        return null;
-    }
-    @Override
-    public void exit() {
+    public void deposit(Integer amount) {
     }
 }
