@@ -1,17 +1,14 @@
 package com.github.zipcodewilmington.casino.games.HigherCards;
 
 import com.github.zipcodewilmington.casino.CasinoAccount;
+import com.github.zipcodewilmington.casino.GamblingGame;
 import com.github.zipcodewilmington.casino.PlayerInterface;
-
-import java.lang.reflect.ParameterizedType;
 
 /**
  * Created by leon on 7/21/2020.
  */
-public class HigherCardPlayer implements PlayerInterface{
-    private CasinoAccount casinoAccount;
-    public HigherCardPlayer(CasinoAccount casinoAccount){
-        this.casinoAccount = casinoAccount;
+public class HigherCardPlayer implements PlayerInterface, GamblingGame {
+    public HigherCardPlayer(CasinoAccount casinoAccount) {
     }
 
     public HigherCardPlayer() {
@@ -24,7 +21,13 @@ public class HigherCardPlayer implements PlayerInterface{
     }
 
     @Override
-    public <SomeReturnType> SomeReturnType play() {
+    public Boolean play() {
+        return null;
+    }
+
+
+    @Override
+    public Double placeBets(double moneyToBet) {
         return null;
     }
 }

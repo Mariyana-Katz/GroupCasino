@@ -5,6 +5,7 @@ package com.github.zipcodewilmington.casino.games.HigherCards;
  */
 import com.github.zipcodewilmington.Player;
 import com.github.zipcodewilmington.casino.GameInterface;
+import com.github.zipcodewilmington.casino.PlayerInterface;
 import com.github.zipcodewilmington.utils.*;
 
 public class HigherCardGame extends CardGame implements GameInterface {
@@ -16,13 +17,25 @@ public class HigherCardGame extends CardGame implements GameInterface {
     int player, croupier;
     private Double bet;
 
-    public HigherCardGame() {
+    public HigherCardGame(Player player) {
+        super(player);
+    }
+
+    @Override
+    public boolean add(PlayerInterface player) {
+        return false;
+    }
+
+    @Override
+    public boolean remove(PlayerInterface player) {
+        return false;
+    }
+
+    @Override
+    public void run() {
 
     }
 
-    public HigherCardGame(Player player){
-        this.player1 = player;
-    }
     @Override
     public void play() {
         console.print("Welcome to HigherCardGame!\nWe both will draw a card, and the higher card wins the wager.\nThe House wins on ties\n");
@@ -104,6 +117,7 @@ public class HigherCardGame extends CardGame implements GameInterface {
     }
 
 
+
     @Override
     public void nextTurn() {
 
@@ -122,5 +136,15 @@ public class HigherCardGame extends CardGame implements GameInterface {
     @Override
     public void exit() {
 
+    }
+
+    @Override
+    public boolean quit() {
+        return false;
+    }
+
+    @Override
+    public boolean playAgain(String prompt) {
+        return false;
     }
 }
