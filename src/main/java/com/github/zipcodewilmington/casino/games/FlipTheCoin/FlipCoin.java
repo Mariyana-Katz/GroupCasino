@@ -14,9 +14,9 @@ public class FlipCoin {
     Balance balance = new Balance(0);
     Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] arg){
-        new FlipCoin().playGame();
-    }
+//    public static void main(String[] arg){
+//        new FlipCoin().playGame();
+//    }
 
     public void playGame() {
         System.out.println("Welcome to the FlipCoin Game! Please flip the coin and may the luck be with you!");
