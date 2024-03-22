@@ -1,15 +1,8 @@
 package com.github.zipcodewilmington;
-
 import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.casino.CasinoAccountManager;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
-
-//import com.github.zipcodewilmington.casino.games.HigherCards.HigherCardGame;
-//import com.github.zipcodewilmington.casino.games.HigherCards.HigherCardPlayer;
-import com.github.zipcodewilmington.casino.games.BlackJack.BlackJack;
-import com.github.zipcodewilmington.casino.games.BlackJack.BlackJackPlayer;
-import com.github.zipcodewilmington.casino.games.slots.SlotsGame;
 import com.github.zipcodewilmington.casino.games.slots.SlotsPlayer;
 import com.github.zipcodewilmington.utils.AnsiColor;
 import com.github.zipcodewilmington.utils.IOConsole;
@@ -30,7 +23,6 @@ public class Casino implements Runnable {
     public void run() {
         String arcadeDashBoardInput;
         CasinoAccountManager casinoAccountManager = new CasinoAccountManager();
-        casinoAccountManager.readFile();
         do {
             arcadeDashBoardInput = getArcadeDashboardInput();
             if ("select-game".equals(arcadeDashBoardInput)) {
@@ -40,8 +32,8 @@ public class Casino implements Runnable {
                 boolean isValidLogin = casinoAccount != null;
                 if (isValidLogin) {
                     String gameSelectionInput = getGameSelectionInput().toUpperCase();
-                    if (gameSelectionInput.equals("BLACKJACK")) {
-                        play(new BlackJack(), new BlackJackPlayer(casinoAccount));
+                    if (gameSelectionInput.equals("SLOTS")) {
+                        play(new SlotsGame(), new SlotsPlayer());
 //                    } else if (gameSelectionInput.equals("NUMBERGUESS")) {
 //                        play(new HigherCardGame(), new HigherCardPlayer());
                     } else {
@@ -61,7 +53,6 @@ public class Casino implements Runnable {
                 CasinoAccount newAccount = casinoAccountManager.createAccount(accountName, accountPassword);
                 casinoAccountManager.registerAccount(newAccount);
             }
-            casinoAccountManager.saveFile();;
         } while (!"logout".equals(arcadeDashBoardInput));
     }
 
@@ -77,7 +68,7 @@ public class Casino implements Runnable {
         return console.getStringInput(new StringBuilder()
                 .append("Welcome to the Game Selection Dashboard!")
                 .append("\nFrom here, you can select any of the following options:")
-                .append("\n\t[ BLACKJACK ], [HIGHER CARD]")
+                .append("\n\t[ SLOTS ], [HIGHER CARD]")
                 .toString());
     }
 
