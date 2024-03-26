@@ -20,8 +20,8 @@ public class FlipCoin {
 
     public void playGame() {
         System.out.println("Welcome to the FlipCoin Game! Please flip the coin and may the luck be with you!");
-        boolean isYesAnswer;
-        int value;
+        boolean isYesAnswer;    //for storing user Yes or No input.
+        int value; //for storing user input for bet and balance amount
 
         try {
             //Set balance, calling the yesOrNo method to receive user input Y/N.If yes the user is asked to enter a deposit.
@@ -36,7 +36,7 @@ public class FlipCoin {
             if(balance.getBalance() > 0) {
 
                 while (true) {
-                    // ask the user if they want to change the bet, and set the bet.
+                    // ask the user if they want to change the bet, and set the bet. Store the bet.
                     isYesAnswer = yesOrNo("The bet is " + getBet() + ". Would you like to change it");
                     if (isYesAnswer){
                         System.out.println("Enter your amount:");
@@ -70,10 +70,12 @@ public class FlipCoin {
                     if(isWinner){
                         System.out.println("Congratulations you win!");
                         balance.deposit(this.getBet());
+                        System.out.println("Your current balance is " + balance.getBalance());
                     }
                     else {
                         System.out.println("I am sorry, you lost!");
-                        balance.deposit(-1 * this.getBet());
+                        balance.withdraw(this.getBet());
+                        System.out.println("Your current balance is " + balance.getBalance());
 
                         //update balance.If balance is 0 the player exit the game,
                         if(balance.getBalance() <= 0){
