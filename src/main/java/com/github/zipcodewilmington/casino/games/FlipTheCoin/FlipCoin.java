@@ -13,7 +13,7 @@ public class FlipCoin {
     int bet = 1;
     Balance balance = new Balance(0);
     Scanner scanner = new Scanner(System.in);
-
+//
 //    public static void main(String[] arg){
 //        new FlipCoin().playGame();
 //    }
